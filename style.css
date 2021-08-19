@@ -16,7 +16,9 @@ body {
     text-align: center;
 }
 .generate-btn{
-    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+    margin: 140px auto 0;
     width: 180px;
     padding: 50px;
     border-radius: 50%;
@@ -25,7 +27,6 @@ body {
     color: #ffffff;
     font-weight: bold;
     font-size: 20px;
-    text-align: center;
 }
 .generate-btn:focus{
     outline: none;
