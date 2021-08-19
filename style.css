@@ -89,6 +89,9 @@ cursor: pointer;
 .submit-btn:disabled{
     opacity: 0.3;
 }
+.submit-btn:hover{
+    transform: skew(-15deg);
+}
 .notify-section p {
     color: #fff;
     text-align: center;
