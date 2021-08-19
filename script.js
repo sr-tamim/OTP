@@ -9,8 +9,8 @@ let actionLeft = 3;
 
 generateBtn.addEventListener('click', function () {
     pin = Math.floor(Math.random() * 10000);
+    if (pin.toString().length != 4) { generateBtn.click(); return; }
     showPin.innerText = pin;
-    if (pin.toString().length != 4) { generateBtn.click() }
 })
 
 document.querySelector('.pin-input').addEventListener('click', function (event) {
@@ -34,6 +34,7 @@ document.querySelector('.pin-input').addEventListener('click', function (event) 
         else if (isNaN(inputPinScreen.innerText)) { alert('Type your pin') }
         else if (inputPinScreen.innerText == pin.toString()) { successMessage.style.display = 'block'; failMessage.style.display = 'none'; actionLeft = 3; }
         else { failMessage.style.display = 'block'; successMessage.style.display = 'none'; actionLeft--; }
+
         document.getElementById('action-count').innerText = actionLeft;
         if (actionLeft == 0) {
             event.target.setAttribute('disabled', true);
